@@ -1,0 +1,169 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scripts/main_menu_and_scene_changer.gd" type="Script" id=1]
+[ext_resource path="res://fonts/Oxygen/Oxygen-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/Fira_Sans/FiraSans-ExtraBold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://example_scenes/reactive_particles.tscn" type="PackedScene" id=4]
+[ext_resource path="res://misc_shaders/mat_post_two_tone_background.tres" type="Material" id=5]
+[ext_resource path="res://misc_shaders/mat_two_tone_label.tres" type="Material" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+extra_spacing_top = 10
+extra_spacing_char = 2
+extra_spacing_space = 4
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.803922, 0.341176, 0.341176, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_top = 20.0
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.803922, 0.341176, 0.341176, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+font_data = ExtResource( 3 )
+
+[node name="main" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="two_tone_background" type="ViewportContainer" parent="."]
+pause_mode = 1
+material = ExtResource( 5 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="two_tone_background"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Spatial" parent="two_tone_background/Viewport" instance=ExtResource( 4 )]
+
+[node name="main_menu" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="main_menu"]
+margin_left = 139.0
+margin_top = 71.0
+margin_right = 884.0
+margin_bottom = 528.0
+custom_constants/separation = 75
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title_text" type="Label" parent="main_menu/VBoxContainer"]
+material = ExtResource( 6 )
+margin_right = 745.0
+margin_bottom = 147.0
+custom_fonts/font = SubResource( 1 )
+text = "Godot Money Engraving
+Post Processing Shader Demo"
+align = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="main_menu/VBoxContainer"]
+margin_top = 222.0
+margin_right = 745.0
+margin_bottom = 302.0
+size_flags_vertical = 3
+
+[node name="start_button" type="Button" parent="main_menu/VBoxContainer/CenterContainer"]
+margin_left = 252.0
+margin_right = 492.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 240, 80 )
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = "Start"
+
+[node name="CenterContainer2" type="CenterContainer" parent="main_menu/VBoxContainer"]
+margin_top = 377.0
+margin_right = 745.0
+margin_bottom = 457.0
+size_flags_vertical = 3
+
+[node name="full_screen_button" type="Button" parent="main_menu/VBoxContainer/CenterContainer2"]
+margin_left = 252.0
+margin_right = 492.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 240, 80 )
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = "Fullscreen"
+
+[node name="cycle_hint" type="Label" parent="."]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 30.3065
+margin_top = -54.0
+margin_right = 438.306
+custom_fonts/font = SubResource( 6 )
+text = "Use A and D to cycle scenes."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="main_menu/VBoxContainer/CenterContainer/start_button" to="." method="_on_start_button_button_up"]
+[connection signal="button_up" from="main_menu/VBoxContainer/CenterContainer2/full_screen_button" to="." method="_on_full_screen_button_button_up"]

@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://misc_shaders/shader_two_tone_text_adapt_to_background.shader" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/standard_color = Color( 1, 1, 1, 1 )
+shader_param/contrast_color = Color( 0, 0, 0, 1 )

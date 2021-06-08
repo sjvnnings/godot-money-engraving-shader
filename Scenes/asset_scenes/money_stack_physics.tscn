@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://imported_meshes/money_stack/money_stack.tscn" type="PackedScene" id=1]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 10.0
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.0771865, 0.0102261, 0.0369079 )
+
+[node name="RigidBody" type="RigidBody"]
+mass = 0.00102041
+physics_material_override = SubResource( 1 )
+gravity_scale = 0.1
+
+[node name="money_stack" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0653491, 0, 0.0277261 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00843066, 0 )
+shape = SubResource( 2 )

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://imported_meshes/dollar_bill/mesh_dollar_bill.tres" type="ArrayMesh" id=1]
+[ext_resource path="res://shared_material_manager/money_material_getter.gd" type="Script" id=2]
+[ext_resource path="res://scripts/reactive_particles.gd" type="Script" id=3]
+[ext_resource path="res://particles/mat_particles_reactive_particles.tres" type="Material" id=4]
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="Particles" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0868101, 0 )
+amount = 128
+lifetime = 2.0
+speed_scale = 0.1
+visibility_aabb = AABB( -4, -11.1884, -4, 8, 22.3768, 8 )
+process_material = ExtResource( 4 )
+draw_pass_1 = ExtResource( 1 )
+script = ExtResource( 2 )
+path_to_mesh = NodePath(".")
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.11801, -3.81912, 0 )

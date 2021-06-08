@@ -1,0 +1,516 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://imported_meshes/money_stack/money_stack.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/asset_scenes/money_stack_physics.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.0725562, 0.0127321, 0.0446441 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="money_stack" parent="." instance=ExtResource( 1 )]
+transform = Transform( 30, 0, 0, 0, 30, 0, 0, 0, 30, -2, -0.5, 1 )
+
+[node name="StaticBody" type="StaticBody" parent="money_stack"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0688834, 0.00837847, -0.0311612 )
+
+[node name="CollisionShape" type="CollisionShape" parent="money_stack/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="rigidbodies" type="Spatial" parent="."]
+
+[node name="RigidBody" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.450085, 0.15632 )
+
+[node name="RigidBody2" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.406668, 0.450085, 0.15632 )
+
+[node name="RigidBody3" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.175657, 0.450085, 0.15632 )
+
+[node name="RigidBody4" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0238594, 0.793456, 0.15632 )
+
+[node name="RigidBody5" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.944949, 0, 0.327218, 0, 1, 0, -0.327218, 0, 0.944949, 0.192657, 0.793456, 0.15632 )
+
+[node name="RigidBody6" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.944949, 0, 0.327218, 0, 1, 0, -0.327218, 0, 0.944949, -0.193215, 0.793456, 0.163873 )
+
+[node name="RigidBody7" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.614781, 0, 0.788698, 0, 1, 0, -0.788698, 0, 0.614781, 0.0843952, 1.00681, 0.46386 )
+
+[node name="RigidBody8" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.600596, 0.213576, 0.7705, 0.0371774, 0.955161, -0.293742, -0.798688, 0.205065, 0.565726, 0.399949, 0.948175, 0.30039 )
+
+[node name="RigidBody9" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.600596, 0.213576, 0.7705, 0.0371774, 0.955161, -0.293742, -0.798688, 0.205065, 0.565726, -0.168939, 1.06977, 0.326496 )
+
+[node name="RigidBody10" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.368825, 0.0967941, 0.924445, 0.259805, 0.944187, -0.202515, -0.892451, 0.314869, 0.323092, 0.134574, 1.35143, 0.277946 )
+
+[node name="RigidBody11" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.32286, 0, 0.946447, 0, 1, 0, -0.946447, 0, 0.32286, 0.397789, 1.35018, 0.313443 )
+
+[node name="RigidBody12" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.0460255, 0.0967941, 0.99424, 0.311769, 0.944187, -0.106354, -0.949042, 0.314869, 0.0132792, -0.272082, 1.34894, 0.356493 )
+
+[node name="RigidBody13" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.229744, 0, 0.973251, 0.310283, 0.947819, -0.0732448, -0.922465, 0.31881, 0.217756, 0, 1.7093, 0.197264 )
+
+[node name="RigidBody14" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.229744, 0, 0.973251, 0, 1, 0, -0.973251, 0, 0.229744, 0.138397, 1.81444, 0.454543 )
+
+[node name="RigidBody15" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.0940891, 0.669727, 0.736623, -0.0848551, 0.742607, -0.66433, -0.991941, 0, 0.126701, -0.175658, 1.7093, 0.197264 )
+
+[node name="RigidBody16" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.229744, 0, 0.973251, 0, 1, 0, -0.973251, 0, 0.229744, 0.0238594, 2.05267, 0.197264 )
+
+[node name="RigidBody17" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.101369, 0, 0.994849, 0, 1, 0, -0.994849, 0, -0.101369, 0.0443676, 2.15781, 0.197264 )
+
+[node name="RigidBody18" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.101369, 0, 0.994849, 0, 1, 0, -0.994849, 0, -0.101369, -0.220254, 2.05267, 0.204817 )
+
+[node name="RigidBody19" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.901554, 0.0788943, 0.425412, -0.0210745, 0.990075, -0.138951, -0.432153, 0.116307, 0.894269, -0.126739, 2.55959, 0.102021 )
+
+[node name="RigidBody20" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.901554, 0.0788943, 0.425412, -0.0210745, 0.990075, -0.138951, -0.432153, 0.116307, 0.894269, 0.239894, 2.55102, -0.0737212 )
+
+[node name="RigidBody21" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.901554, 0.0788943, 0.425412, -0.0210745, 0.990075, -0.138951, -0.432153, 0.116307, 0.894269, -0.285104, 2.56329, 0.177932 )
+
+[node name="RigidBody22" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.901554, 0.0788943, 0.425412, -0.0210745, 0.990075, -0.138951, -0.432153, 0.116307, 0.894269, -0.0781387, 2.89905, 0.131647 )
+
+[node name="RigidBody23" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.71272, 0.0788943, 0.696998, 0.025553, 0.990075, -0.138198, -0.700983, 0.116307, 0.70363, 0.0740412, 2.89549, 0.0587004 )
+
+[node name="RigidBody24" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.71272, 0.0788943, 0.696998, 0.025553, 0.990075, -0.138198, -0.700983, 0.116307, 0.70363, -0.27063, 2.90258, 0.23221 )
+
+[node name="RigidBody25" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.218737, 0.0788943, 0.972589, 0.0966344, 0.990075, -0.102046, -0.970987, 0.116307, 0.208942, 0.124102, 3.06628, 0.405324 )
+
+[node name="RigidBody26" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.204631, 0.355145, 0.91214, 0.13513, 0.912686, -0.385673, -0.969467, 0.202178, 0.138773, 0.334422, 3.02429, 0.11595 )
+
+[node name="RigidBody27" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.204631, 0.355145, 0.91214, 0.13513, 0.912686, -0.385673, -0.969467, 0.202178, 0.138773, -0.157762, 3.15304, 0.399286 )
+
+[node name="RigidBody28" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.026647, 0.295705, 0.954908, 0.373461, 0.889024, -0.264882, -0.927263, 0.349563, -0.134124, 0.117439, 3.43225, 0.257463 )
+
+[node name="RigidBody29" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.111554, 0.0788943, 0.990622, 0.124706, 0.990075, -0.0648077, -0.985903, 0.116307, -0.120285, 0.369744, 3.42054, 0.175314 )
+
+[node name="RigidBody30" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.337643, 0.295705, 0.893619, 0.439576, 0.889024, -0.128096, -0.832328, 0.349563, -0.430158, -0.215965, 3.42744, 0.503153 )
+
+[node name="RigidBody31" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.160822, 0.210403, 0.964296, 0.430539, 0.894112, -0.123286, -0.888129, 0.39534, -0.23438, -0.00997621, 3.80062, 0.285091 )
+
+[node name="RigidBody32" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.206906, 0.0788943, 0.975175, 0.130393, 0.990075, -0.0524339, -0.969633, 0.116307, -0.21514, 0.232541, 3.86605, 0.467587 )
+
+[node name="RigidBody33" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.343852, 0.662383, 0.665594, 0.0518356, 0.721123, -0.690865, -0.937592, -0.203054, -0.282295, -0.168341, 3.80432, 0.361002 )
+
+[node name="RigidBody34" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.206906, 0.0788943, 0.975175, 0.130393, 0.990075, -0.0524339, -0.969633, 0.116307, -0.21514, 0.0386243, 4.14008, 0.314717 )
+
+[node name="RigidBody35" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.514611, 0.0788943, 0.853787, 0.140372, 0.990075, -0.00688056, -0.845856, 0.116307, -0.520578, 0.0654083, 4.24374, 0.318082 )
+
+[node name="RigidBody36" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.514611, 0.0788943, 0.853787, 0.140372, 0.990075, -0.00688056, -0.845856, 0.116307, -0.520578, -0.178244, 4.14418, 0.426965 )
+
+[node name="RigidBody37" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.824868, 0.0957517, 0.557158, -0.0210745, 0.990075, -0.138951, -0.564933, 0.102875, 0.818699, 0.0551187, 4.40524, 0.129199 )
+
+[node name="RigidBody38" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.824868, 0.0957517, 0.557158, -0.0210745, 0.990075, -0.138951, -0.564933, 0.102875, 0.818699, 0.390566, 4.39667, -0.100541 )
+
+[node name="RigidBody39" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.824868, 0.0957517, 0.557158, -0.0210745, 0.990075, -0.138951, -0.564933, 0.102875, 0.818699, -0.0897755, 4.40894, 0.228433 )
+
+[node name="RigidBody40" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.824868, 0.0957517, 0.557158, -0.0210745, 0.990075, -0.138951, -0.564933, 0.102875, 0.818699, 0.107678, 4.7447, 0.151044 )
+
+[node name="RigidBody41" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.597146, 0.0957517, 0.796397, 0.025553, 0.990075, -0.138198, -0.801726, 0.102875, 0.588772, 0.246913, 4.74114, 0.0556846 )
+
+[node name="RigidBody42" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.597146, 0.0957517, 0.796397, 0.025553, 0.990075, -0.138198, -0.801726, 0.102875, 0.588772, -0.0671714, 4.74822, 0.27986 )
+
+[node name="RigidBody43" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.0676837, 0.0957517, 0.993102, 0.0966344, 0.990075, -0.102046, -0.993016, 0.102875, 0.057759, 0.34939, 4.91193, 0.390577 )
+
+[node name="RigidBody44" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.0539765, 0.381884, 0.922633, 0.13513, 0.912686, -0.385673, -0.989357, 0.145492, -0.00234038, 0.512986, 4.86994, 0.0724444 )
+
+[node name="RigidBody45" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( 0.0539765, 0.381884, 0.922633, 0.13513, 0.912686, -0.385673, -0.989357, 0.145492, -0.00234038, 0.0699173, 4.99869, 0.427711 )
+
+[node name="RigidBody46" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.168128, 0.345681, 0.923167, 0.373461, 0.889024, -0.264882, -0.912283, 0.300233, -0.278568, 0.320195, 5.2779, 0.245473 )
+
+[node name="RigidBody47" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.261003, 0.0957517, 0.960577, 0.124706, 0.990075, -0.0648077, -0.957249, 0.102875, -0.270353, 0.55697, 5.26619, 0.125708 )
+
+[node name="RigidBody48" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.460949, 0.345681, 0.817331, 0.439576, 0.889024, -0.128096, -0.770908, 0.300233, -0.561748, 0.0282819, 5.27309, 0.539257 )
+
+[node name="RigidBody49" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.29474, 0.268383, 0.917114, 0.430539, 0.894112, -0.123286, -0.853091, 0.358516, -0.37908, 0.198503, 5.64627, 0.292261 )
+
+[node name="RigidBody50" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.352746, 0.0957517, 0.930807, 0.130393, 0.990075, -0.0524339, -0.926589, 0.102875, -0.36173, 0.466074, 5.7117, 0.435525 )
+
+[node name="RigidBody51" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.483182, 0.623542, 0.614598, 0.0518356, 0.721123, -0.690865, -0.873984, -0.301955, -0.380755, 0.0536087, 5.64997, 0.391495 )
+
+[node name="RigidBody52" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.352746, 0.0957517, 0.930807, 0.130393, 0.990075, -0.0524339, -0.926589, 0.102875, -0.36173, 0.251062, 5.98573, 0.314106 )
+
+[node name="RigidBody53" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.637904, 0.0957517, 0.76414, 0.140372, 0.990075, -0.00688056, -0.757215, 0.102875, -0.645013, 0.278046, 6.08939, 0.313336 )
+
+[node name="RigidBody54" parent="rigidbodies" instance=ExtResource( 2 )]
+transform = Transform( -0.637904, 0.0957517, 0.76414, 0.140372, 0.990075, -0.00688056, -0.757215, 0.102875, -0.645013, 0.0539089, 5.98982, 0.458197 )
+
+[node name="rigidbodies2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.25596, 0 )
+
+[node name="RigidBody" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.450085, 0.15632 )
+
+[node name="RigidBody2" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.406668, 0.450085, 0.15632 )
+
+[node name="RigidBody3" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.175657, 0.450085, 0.15632 )
+
+[node name="RigidBody4" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0238594, 0.793456, 0.15632 )
+
+[node name="RigidBody5" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.944949, 0, 0.327218, 0, 1, 0, -0.327218, 0, 0.944949, 0.192657, 0.793456, 0.15632 )
+
+[node name="RigidBody6" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.944949, 0, 0.327218, 0, 1, 0, -0.327218, 0, 0.944949, -0.193215, 0.793456, 0.163873 )
+
+[node name="RigidBody7" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.614781, 0, 0.788698, 0, 1, 0, -0.788698, 0, 0.614781, 0.0843952, 1.00681, 0.46386 )
+
+[node name="RigidBody8" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.600596, 0.213576, 0.7705, 0.0371774, 0.955161, -0.293742, -0.798688, 0.205065, 0.565726, 0.399949, 0.948175, 0.30039 )
+
+[node name="RigidBody9" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.600596, 0.213576, 0.7705, 0.0371774, 0.955161, -0.293742, -0.798688, 0.205065, 0.565726, -0.168939, 1.06977, 0.326496 )
+
+[node name="RigidBody10" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.368825, 0.0967941, 0.924445, 0.259805, 0.944187, -0.202515, -0.892451, 0.314869, 0.323092, 0.134574, 1.35143, 0.277946 )
+
+[node name="RigidBody11" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.32286, 0, 0.946447, 0, 1, 0, -0.946447, 0, 0.32286, 0.397789, 1.35018, 0.313443 )
+
+[node name="RigidBody12" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.0460255, 0.0967941, 0.99424, 0.311769, 0.944187, -0.106354, -0.949042, 0.314869, 0.0132792, -0.272082, 1.34894, 0.356493 )
+
+[node name="RigidBody13" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.229744, 0, 0.973251, 0.310283, 0.947819, -0.0732448, -0.922465, 0.31881, 0.217756, 0, 1.7093, 0.197264 )
+
+[node name="RigidBody14" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.229744, 0, 0.973251, 0, 1, 0, -0.973251, 0, 0.229744, 0.138397, 1.81444, 0.454543 )
+
+[node name="RigidBody15" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.0940891, 0.669727, 0.736623, -0.0848551, 0.742607, -0.66433, -0.991941, 0, 0.126701, -0.175658, 1.7093, 0.197264 )
+
+[node name="RigidBody16" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.229744, 0, 0.973251, 0, 1, 0, -0.973251, 0, 0.229744, 0.0238594, 2.05267, 0.197264 )
+
+[node name="RigidBody17" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.101369, 0, 0.994849, 0, 1, 0, -0.994849, 0, -0.101369, 0.0443676, 2.15781, 0.197264 )
+
+[node name="RigidBody18" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.101369, 0, 0.994849, 0, 1, 0, -0.994849, 0, -0.101369, -0.220254, 2.05267, 0.204817 )
+
+[node name="RigidBody19" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.901554, 0.0788943, 0.425412, -0.0210745, 0.990075, -0.138951, -0.432153, 0.116307, 0.894269, -0.126739, 2.55959, 0.102021 )
+
+[node name="RigidBody20" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.901554, 0.0788943, 0.425412, -0.0210745, 0.990075, -0.138951, -0.432153, 0.116307, 0.894269, 0.239894, 2.55102, -0.0737212 )
+
+[node name="RigidBody21" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.901554, 0.0788943, 0.425412, -0.0210745, 0.990075, -0.138951, -0.432153, 0.116307, 0.894269, -0.285104, 2.56329, 0.177932 )
+
+[node name="RigidBody22" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.901554, 0.0788943, 0.425412, -0.0210745, 0.990075, -0.138951, -0.432153, 0.116307, 0.894269, -0.0781387, 2.89905, 0.131647 )
+
+[node name="RigidBody23" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.71272, 0.0788943, 0.696998, 0.025553, 0.990075, -0.138198, -0.700983, 0.116307, 0.70363, 0.0740412, 2.89549, 0.0587004 )
+
+[node name="RigidBody24" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.71272, 0.0788943, 0.696998, 0.025553, 0.990075, -0.138198, -0.700983, 0.116307, 0.70363, -0.27063, 2.90258, 0.23221 )
+
+[node name="RigidBody25" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.218737, 0.0788943, 0.972589, 0.0966344, 0.990075, -0.102046, -0.970987, 0.116307, 0.208942, 0.124102, 3.06628, 0.405324 )
+
+[node name="RigidBody26" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.204631, 0.355145, 0.91214, 0.13513, 0.912686, -0.385673, -0.969467, 0.202178, 0.138773, 0.334422, 3.02429, 0.11595 )
+
+[node name="RigidBody27" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.204631, 0.355145, 0.91214, 0.13513, 0.912686, -0.385673, -0.969467, 0.202178, 0.138773, -0.157762, 3.15304, 0.399286 )
+
+[node name="RigidBody28" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.026647, 0.295705, 0.954908, 0.373461, 0.889024, -0.264882, -0.927263, 0.349563, -0.134124, 0.117439, 3.43225, 0.257463 )
+
+[node name="RigidBody29" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.111554, 0.0788943, 0.990622, 0.124706, 0.990075, -0.0648077, -0.985903, 0.116307, -0.120285, 0.369744, 3.42054, 0.175314 )
+
+[node name="RigidBody30" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.337643, 0.295705, 0.893619, 0.439576, 0.889024, -0.128096, -0.832328, 0.349563, -0.430158, -0.215965, 3.42744, 0.503153 )
+
+[node name="RigidBody31" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.160822, 0.210403, 0.964296, 0.430539, 0.894112, -0.123286, -0.888129, 0.39534, -0.23438, -0.00997621, 3.80062, 0.285091 )
+
+[node name="RigidBody32" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.206906, 0.0788943, 0.975175, 0.130393, 0.990075, -0.0524339, -0.969633, 0.116307, -0.21514, 0.232541, 3.86605, 0.467587 )
+
+[node name="RigidBody33" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.343852, 0.662383, 0.665594, 0.0518356, 0.721123, -0.690865, -0.937592, -0.203054, -0.282295, -0.168341, 3.80432, 0.361002 )
+
+[node name="RigidBody34" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.206906, 0.0788943, 0.975175, 0.130393, 0.990075, -0.0524339, -0.969633, 0.116307, -0.21514, 0.0386243, 4.14008, 0.314717 )
+
+[node name="RigidBody35" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.514611, 0.0788943, 0.853787, 0.140372, 0.990075, -0.00688056, -0.845856, 0.116307, -0.520578, 0.0654083, 4.24374, 0.318082 )
+
+[node name="RigidBody36" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.514611, 0.0788943, 0.853787, 0.140372, 0.990075, -0.00688056, -0.845856, 0.116307, -0.520578, -0.178244, 4.14418, 0.426965 )
+
+[node name="RigidBody37" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.824868, 0.0957517, 0.557158, -0.0210745, 0.990075, -0.138951, -0.564933, 0.102875, 0.818699, 0.0551187, 4.40524, 0.129199 )
+
+[node name="RigidBody38" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.824868, 0.0957517, 0.557158, -0.0210745, 0.990075, -0.138951, -0.564933, 0.102875, 0.818699, 0.390566, 4.39667, -0.100541 )
+
+[node name="RigidBody39" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.824868, 0.0957517, 0.557158, -0.0210745, 0.990075, -0.138951, -0.564933, 0.102875, 0.818699, -0.0897755, 4.40894, 0.228433 )
+
+[node name="RigidBody40" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.824868, 0.0957517, 0.557158, -0.0210745, 0.990075, -0.138951, -0.564933, 0.102875, 0.818699, 0.107678, 4.7447, 0.151044 )
+
+[node name="RigidBody41" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.597146, 0.0957517, 0.796397, 0.025553, 0.990075, -0.138198, -0.801726, 0.102875, 0.588772, 0.246913, 4.74114, 0.0556846 )
+
+[node name="RigidBody42" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.597146, 0.0957517, 0.796397, 0.025553, 0.990075, -0.138198, -0.801726, 0.102875, 0.588772, -0.0671714, 4.74822, 0.27986 )
+
+[node name="RigidBody43" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.0676837, 0.0957517, 0.993102, 0.0966344, 0.990075, -0.102046, -0.993016, 0.102875, 0.057759, 0.34939, 4.91193, 0.390577 )
+
+[node name="RigidBody44" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.0539765, 0.381884, 0.922633, 0.13513, 0.912686, -0.385673, -0.989357, 0.145492, -0.00234038, 0.512986, 4.86994, 0.0724444 )
+
+[node name="RigidBody45" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( 0.0539765, 0.381884, 0.922633, 0.13513, 0.912686, -0.385673, -0.989357, 0.145492, -0.00234038, 0.0699173, 4.99869, 0.427711 )
+
+[node name="RigidBody46" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.168128, 0.345681, 0.923167, 0.373461, 0.889024, -0.264882, -0.912283, 0.300233, -0.278568, 0.320195, 5.2779, 0.245473 )
+
+[node name="RigidBody47" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.261003, 0.0957517, 0.960577, 0.124706, 0.990075, -0.0648077, -0.957249, 0.102875, -0.270353, 0.55697, 5.26619, 0.125708 )
+
+[node name="RigidBody48" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.460949, 0.345681, 0.817331, 0.439576, 0.889024, -0.128096, -0.770908, 0.300233, -0.561748, 0.0282819, 5.27309, 0.539257 )
+
+[node name="RigidBody49" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.29474, 0.268383, 0.917114, 0.430539, 0.894112, -0.123286, -0.853091, 0.358516, -0.37908, 0.198503, 5.64627, 0.292261 )
+
+[node name="RigidBody50" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.352746, 0.0957517, 0.930807, 0.130393, 0.990075, -0.0524339, -0.926589, 0.102875, -0.36173, 0.466074, 5.7117, 0.435525 )
+
+[node name="RigidBody51" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.483182, 0.623542, 0.614598, 0.0518356, 0.721123, -0.690865, -0.873984, -0.301955, -0.380755, 0.0536087, 5.64997, 0.391495 )
+
+[node name="RigidBody52" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.352746, 0.0957517, 0.930807, 0.130393, 0.990075, -0.0524339, -0.926589, 0.102875, -0.36173, 0.251062, 5.98573, 0.314106 )
+
+[node name="RigidBody53" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.637904, 0.0957517, 0.76414, 0.140372, 0.990075, -0.00688056, -0.757215, 0.102875, -0.645013, 0.278046, 6.08939, 0.313336 )
+
+[node name="RigidBody54" parent="rigidbodies2" instance=ExtResource( 2 )]
+transform = Transform( -0.637904, 0.0957517, 0.76414, 0.140372, 0.990075, -0.00688056, -0.757215, 0.102875, -0.645013, 0.0539089, 5.98982, 0.458197 )
+
+[node name="rigidbodies3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.7111, 0 )
+
+[node name="RigidBody" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.450085, 0.15632 )
+
+[node name="RigidBody2" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.406668, 0.450085, 0.15632 )
+
+[node name="RigidBody3" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.175657, 0.450085, 0.15632 )
+
+[node name="RigidBody4" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0238594, 0.793456, 0.15632 )
+
+[node name="RigidBody5" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.944949, 0, 0.327218, 0, 1, 0, -0.327218, 0, 0.944949, 0.192657, 0.793456, 0.15632 )
+
+[node name="RigidBody6" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.944949, 0, 0.327218, 0, 1, 0, -0.327218, 0, 0.944949, -0.193215, 0.793456, 0.163873 )
+
+[node name="RigidBody7" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.614781, 0, 0.788698, 0, 1, 0, -0.788698, 0, 0.614781, 0.0843952, 1.00681, 0.46386 )
+
+[node name="RigidBody8" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.600596, 0.213576, 0.7705, 0.0371774, 0.955161, -0.293742, -0.798688, 0.205065, 0.565726, 0.399949, 0.948175, 0.30039 )
+
+[node name="RigidBody9" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.600596, 0.213576, 0.7705, 0.0371774, 0.955161, -0.293742, -0.798688, 0.205065, 0.565726, -0.168939, 1.06977, 0.326496 )
+
+[node name="RigidBody10" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.368825, 0.0967941, 0.924445, 0.259805, 0.944187, -0.202515, -0.892451, 0.314869, 0.323092, 0.134574, 1.35143, 0.277946 )
+
+[node name="RigidBody11" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.32286, 0, 0.946447, 0, 1, 0, -0.946447, 0, 0.32286, 0.397789, 1.35018, 0.313443 )
+
+[node name="RigidBody12" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.0460255, 0.0967941, 0.99424, 0.311769, 0.944187, -0.106354, -0.949042, 0.314869, 0.0132792, -0.272082, 1.34894, 0.356493 )
+
+[node name="RigidBody13" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.229744, 0, 0.973251, 0.310283, 0.947819, -0.0732448, -0.922465, 0.31881, 0.217756, 0, 1.7093, 0.197264 )
+
+[node name="RigidBody14" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.229744, 0, 0.973251, 0, 1, 0, -0.973251, 0, 0.229744, 0.138397, 1.81444, 0.454543 )
+
+[node name="RigidBody15" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.0940891, 0.669727, 0.736623, -0.0848551, 0.742607, -0.66433, -0.991941, 0, 0.126701, -0.175658, 1.7093, 0.197264 )
+
+[node name="RigidBody16" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.229744, 0, 0.973251, 0, 1, 0, -0.973251, 0, 0.229744, 0.0238594, 2.05267, 0.197264 )
+
+[node name="RigidBody17" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.101369, 0, 0.994849, 0, 1, 0, -0.994849, 0, -0.101369, 0.0443676, 2.15781, 0.197264 )
+
+[node name="RigidBody18" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.101369, 0, 0.994849, 0, 1, 0, -0.994849, 0, -0.101369, -0.220254, 2.05267, 0.204817 )
+
+[node name="RigidBody19" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.901554, 0.0788943, 0.425412, -0.0210745, 0.990075, -0.138951, -0.432153, 0.116307, 0.894269, -0.126739, 2.55959, 0.102021 )
+
+[node name="RigidBody20" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.901554, 0.0788943, 0.425412, -0.0210745, 0.990075, -0.138951, -0.432153, 0.116307, 0.894269, 0.239894, 2.55102, -0.0737212 )
+
+[node name="RigidBody21" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.901554, 0.0788943, 0.425412, -0.0210745, 0.990075, -0.138951, -0.432153, 0.116307, 0.894269, -0.285104, 2.56329, 0.177932 )
+
+[node name="RigidBody22" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.901554, 0.0788943, 0.425412, -0.0210745, 0.990075, -0.138951, -0.432153, 0.116307, 0.894269, -0.0781387, 2.89905, 0.131647 )
+
+[node name="RigidBody23" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.71272, 0.0788943, 0.696998, 0.025553, 0.990075, -0.138198, -0.700983, 0.116307, 0.70363, 0.0740412, 2.89549, 0.0587004 )
+
+[node name="RigidBody24" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.71272, 0.0788943, 0.696998, 0.025553, 0.990075, -0.138198, -0.700983, 0.116307, 0.70363, -0.27063, 2.90258, 0.23221 )
+
+[node name="RigidBody25" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.218737, 0.0788943, 0.972589, 0.0966344, 0.990075, -0.102046, -0.970987, 0.116307, 0.208942, 0.124102, 3.06628, 0.405324 )
+
+[node name="RigidBody26" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.204631, 0.355145, 0.91214, 0.13513, 0.912686, -0.385673, -0.969467, 0.202178, 0.138773, 0.334422, 3.02429, 0.11595 )
+
+[node name="RigidBody27" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.204631, 0.355145, 0.91214, 0.13513, 0.912686, -0.385673, -0.969467, 0.202178, 0.138773, -0.157762, 3.15304, 0.399286 )
+
+[node name="RigidBody28" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.026647, 0.295705, 0.954908, 0.373461, 0.889024, -0.264882, -0.927263, 0.349563, -0.134124, 0.117439, 3.43225, 0.257463 )
+
+[node name="RigidBody29" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.111554, 0.0788943, 0.990622, 0.124706, 0.990075, -0.0648077, -0.985903, 0.116307, -0.120285, 0.369744, 3.42054, 0.175314 )
+
+[node name="RigidBody30" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.337643, 0.295705, 0.893619, 0.439576, 0.889024, -0.128096, -0.832328, 0.349563, -0.430158, -0.215965, 3.42744, 0.503153 )
+
+[node name="RigidBody31" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.160822, 0.210403, 0.964296, 0.430539, 0.894112, -0.123286, -0.888129, 0.39534, -0.23438, -0.00997621, 3.80062, 0.285091 )
+
+[node name="RigidBody32" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.206906, 0.0788943, 0.975175, 0.130393, 0.990075, -0.0524339, -0.969633, 0.116307, -0.21514, 0.232541, 3.86605, 0.467587 )
+
+[node name="RigidBody33" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.343852, 0.662383, 0.665594, 0.0518356, 0.721123, -0.690865, -0.937592, -0.203054, -0.282295, -0.168341, 3.80432, 0.361002 )
+
+[node name="RigidBody34" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.206906, 0.0788943, 0.975175, 0.130393, 0.990075, -0.0524339, -0.969633, 0.116307, -0.21514, 0.0386243, 4.14008, 0.314717 )
+
+[node name="RigidBody35" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.514611, 0.0788943, 0.853787, 0.140372, 0.990075, -0.00688056, -0.845856, 0.116307, -0.520578, 0.0654083, 4.24374, 0.318082 )
+
+[node name="RigidBody36" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.514611, 0.0788943, 0.853787, 0.140372, 0.990075, -0.00688056, -0.845856, 0.116307, -0.520578, -0.178244, 4.14418, 0.426965 )
+
+[node name="RigidBody37" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.824868, 0.0957517, 0.557158, -0.0210745, 0.990075, -0.138951, -0.564933, 0.102875, 0.818699, 0.0551187, 4.40524, 0.129199 )
+
+[node name="RigidBody38" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.824868, 0.0957517, 0.557158, -0.0210745, 0.990075, -0.138951, -0.564933, 0.102875, 0.818699, 0.390566, 4.39667, -0.100541 )
+
+[node name="RigidBody39" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.824868, 0.0957517, 0.557158, -0.0210745, 0.990075, -0.138951, -0.564933, 0.102875, 0.818699, -0.0897755, 4.40894, 0.228433 )
+
+[node name="RigidBody40" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.824868, 0.0957517, 0.557158, -0.0210745, 0.990075, -0.138951, -0.564933, 0.102875, 0.818699, 0.107678, 4.7447, 0.151044 )
+
+[node name="RigidBody41" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.597146, 0.0957517, 0.796397, 0.025553, 0.990075, -0.138198, -0.801726, 0.102875, 0.588772, 0.246913, 4.74114, 0.0556846 )
+
+[node name="RigidBody42" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.597146, 0.0957517, 0.796397, 0.025553, 0.990075, -0.138198, -0.801726, 0.102875, 0.588772, -0.0671714, 4.74822, 0.27986 )
+
+[node name="RigidBody43" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.0676837, 0.0957517, 0.993102, 0.0966344, 0.990075, -0.102046, -0.993016, 0.102875, 0.057759, 0.34939, 4.91193, 0.390577 )
+
+[node name="RigidBody44" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.0539765, 0.381884, 0.922633, 0.13513, 0.912686, -0.385673, -0.989357, 0.145492, -0.00234038, 0.512986, 4.86994, 0.0724444 )
+
+[node name="RigidBody45" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( 0.0539765, 0.381884, 0.922633, 0.13513, 0.912686, -0.385673, -0.989357, 0.145492, -0.00234038, 0.0699173, 4.99869, 0.427711 )
+
+[node name="RigidBody46" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.168128, 0.345681, 0.923167, 0.373461, 0.889024, -0.264882, -0.912283, 0.300233, -0.278568, 0.320195, 5.2779, 0.245473 )
+
+[node name="RigidBody47" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.261003, 0.0957517, 0.960577, 0.124706, 0.990075, -0.0648077, -0.957249, 0.102875, -0.270353, 0.55697, 5.26619, 0.125708 )
+
+[node name="RigidBody48" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.460949, 0.345681, 0.817331, 0.439576, 0.889024, -0.128096, -0.770908, 0.300233, -0.561748, 0.0282819, 5.27309, 0.539257 )
+
+[node name="RigidBody49" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.29474, 0.268383, 0.917114, 0.430539, 0.894112, -0.123286, -0.853091, 0.358516, -0.37908, 0.198503, 5.64627, 0.292261 )
+
+[node name="RigidBody50" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.352746, 0.0957517, 0.930807, 0.130393, 0.990075, -0.0524339, -0.926589, 0.102875, -0.36173, 0.466074, 5.7117, 0.435525 )
+
+[node name="RigidBody51" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.483182, 0.623542, 0.614598, 0.0518356, 0.721123, -0.690865, -0.873984, -0.301955, -0.380755, 0.0536087, 5.64997, 0.391495 )
+
+[node name="RigidBody52" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.352746, 0.0957517, 0.930807, 0.130393, 0.990075, -0.0524339, -0.926589, 0.102875, -0.36173, 0.251062, 5.98573, 0.314106 )
+
+[node name="RigidBody53" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.637904, 0.0957517, 0.76414, 0.140372, 0.990075, -0.00688056, -0.757215, 0.102875, -0.645013, 0.278046, 6.08939, 0.313336 )
+
+[node name="RigidBody54" parent="rigidbodies3" instance=ExtResource( 2 )]
+transform = Transform( -0.637904, 0.0957517, 0.76414, 0.140372, 0.990075, -0.00688056, -0.757215, 0.102875, -0.645013, 0.0539089, 5.98982, 0.458197 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.999996, 0.000994299, -0.00246663, 0.000592103, 0.820966, 0.570976, 0.00259274, -0.570976, 0.820963, 0, 0.830025, 0.909 )
+near = 0.01

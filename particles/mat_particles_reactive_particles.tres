@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://particles/shader_reactive_particles.shader" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/spawn_radius = 2.0
+shader_param/avoidance_radius = 1.0
+shader_param/avo_speed = 20.0
+shader_param/rotation_over_time = 2.0
+shader_param/scale = 3.0
+shader_param/ray_start = Vector3( -20, -1, 0 )
+shader_param/ray_normal = Vector3( 1, 0, 0 )

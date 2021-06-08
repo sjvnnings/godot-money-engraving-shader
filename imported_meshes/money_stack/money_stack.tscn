@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://shared_material_manager/money_material_getter_self.gd" type="Script" id=1]
+[ext_resource path="res://imported_meshes/money_stack/mesh_money_stack.tres" type="ArrayMesh" id=2]
+
+
+[node name="money_stack" type="Spatial"]
+
+[node name="dollar_mesh" type="MeshInstance" parent="."]
+mesh = ExtResource( 2 )
+material/0 = null
+script = ExtResource( 1 )

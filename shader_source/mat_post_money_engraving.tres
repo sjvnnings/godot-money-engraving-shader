@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=2]
+
+[ext_resource path="res://shader_source/shader_money_engraving.shader" type="Shader" id=1]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0.1088, 0.17, 0.15674, 1, 0.941292, 0.95, 0.8455, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/fill_size = 100.0
+shader_param/wavelength = 34.0
+shader_param/amplitude = 0.025
+shader_param/ripple_wavelength = 10.0
+shader_param/ripple_amplitude_angle = 5.0
+shader_param/grey_level_min = 0.1
+shader_param/grey_level_max = 0.9
+shader_param/engrave_opacity = 0.88
+shader_param/gradient_map = SubResource( 2 )

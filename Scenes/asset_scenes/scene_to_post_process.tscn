@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://imported_meshes/godot_3d_logo/godot logo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/rotate_around_y.gd" type="Script" id=2]
+
+[sub_resource type="Environment" id=1]
+background_mode = 1
+background_color = Color( 0.643137, 0.643137, 0.643137, 1 )
+
+[node name="TestRenderScene" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.484082, 0.149658, -0.86213, 0, 0.985265, 0.171033, 0.875023, 0.0827941, -0.476949, -5.62707, 0.796113, -2.14344 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="WorldEnvironment"]
+transform = Transform( 0.200675, 0.806135, -0.556665, -0.273386, 0.591732, 0.758362, 0.940739, 1.40181e-08, 0.339132, 0, 0, 0 )
+
+[node name="godot logo" parent="." instance=ExtResource( 1 )]
+script = ExtResource( 2 )

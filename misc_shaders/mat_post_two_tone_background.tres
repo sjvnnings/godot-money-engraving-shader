@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://misc_shaders/shader_two_tone_post_processing.shader" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/background_color = null
+shader_param/obj_color = Color( 0.803922, 0.341176, 0.341176, 1 )
