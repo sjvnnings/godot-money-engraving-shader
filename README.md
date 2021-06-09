@@ -1,6 +1,6 @@
 # Godot Money Engraving Shader
 
-A small demo showcasing the bill engraving shader I made for this tutorial on YouTube. You can play the demo in your browser on [itch.io](https://pefeper.itch.io/godot-money-engraving-shader-demo).
+A small demo showcasing the bill engraving shader I made for [this tutorial on YouTube](https://www.youtube.com/watch?v=rxxQgrmKLk0). You can play the demo in your browser on [itch.io](https://pefeper.itch.io/godot-money-engraving-shader-demo).
 
 - If all you care about is the shader itself, go to the [shader_source folder](https://github.com/sjvnnings/godot-money-engraving-shader/tree/main/shader_source).
 - All code is MIT licensed
