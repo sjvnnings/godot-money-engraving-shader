@@ -1,0 +1,4 @@
+The Godot Logo texture was provided by the Godot project via their press kit and licensed under CC BY 4.0
+
+Press Kit: https://godotengine.org/press
+License: https://github.com/godotengine/godot/blob/master/LOGO_LICENSE.md
